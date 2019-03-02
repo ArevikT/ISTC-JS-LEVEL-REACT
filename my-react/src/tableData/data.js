@@ -1,4 +1,5 @@
-let arrData = [
+export default 
+[
     {
         "game_number": "47239",
         "status": "Srarted",
@@ -150,4 +151,3 @@ let arrData = [
         "action": "PLAY NOW"
     },
 ]
-export default arrData ;
