@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header/header';
 import Check from './sectionCheck';
-import Data from './sectionData' ;
+import Data from './Data/sectionData' ;
 import './style.css';
 
 class Table extends Component {
