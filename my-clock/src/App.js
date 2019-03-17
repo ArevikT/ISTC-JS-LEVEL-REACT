@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Clock from "./components/showClock"
+import Clock from "./components/showClock" ;
+import MyClock from  "./components/clock" ;
 
 import './App.css';
 
@@ -14,7 +15,8 @@ class App extends Component {
     return (
       <div className="App">
          {this.state.clicked?null:<Clock />}
-         <button onClick = {this.delete}>Click</button>
+         <button onClick = {this.delete}>Click</button> <br />
+         <MyClock />
       </div>
     );
   }

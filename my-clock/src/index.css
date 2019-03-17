@@ -12,3 +12,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+#clock{
+   width:200px;
+   height: 200px;
+   background-image: url("./components/image.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin: 5% auto;
+   
+}
+.clockHand{
+  width: 4px;
+  height: 85px;
+  background-color: rgb(36, 31, 31);
+  margin: 0 auto;
+  padding-bottom: 15px;
+  transition-duration: 4s;
+  transform-origin: bottom;
+}

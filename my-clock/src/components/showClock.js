@@ -27,14 +27,11 @@ class Clock extends Component {
         clearInterval(this.time);
     }
 
-
-
     render(){
         return(
             <Fragment>
                 <h1>Hello erexeq jan</h1>
-                <p>the time is { this.state.date.toLocaleTimeString()}</p>
-                
+                <p>the time is { this.state.date.toLocaleTimeString()}</p>   
             </Fragment>
         )
     }
