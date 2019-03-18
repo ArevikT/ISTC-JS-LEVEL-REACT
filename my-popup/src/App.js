@@ -1,25 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Popup from "./components/showPopoup";
 
 import './App.css';
 
 class App extends Component {
-  state = {
-    popup: false
+  
+   state = {
+      showPopup: false
+    };
+  
+  togglePopup=()=> {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
   }
-  showPopup = () => {
-     this.setState({popup: true})
-  }
-
   render() {
     return (
-      <div className="App">
-          <p>show your popup</p>
-          <button>Show popup</button>
-          {this.state.popup ? <Popup text="Hello" myFunction = {this.showPopup} />:null}
-      </div>
+      <Fragment>
+        <h1>hihi</h1>
+        <button onClick={this.togglePopup}>show popup</button>
+        {this.state.showPopup ?  <Popup text='Close Me' closePopup={this.togglePopup} />: null}
+      </Fragment>
     );
-  
   }
 }
 export default App;

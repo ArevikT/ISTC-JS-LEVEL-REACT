@@ -16,7 +16,7 @@ class Data extends Component {
    })
    .then(response => response.json()) 
    .then(response => {
-      this.setState({data:[response]});
+      this.setState({data:response});
 
        console.log(response);
            let arr2 = [];
