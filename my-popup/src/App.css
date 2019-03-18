@@ -1,33 +1,113 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+html, body{
+  width: 100%;
+  height: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  background-color: black;
+}
+.wrap1{
+  max-width:100%;
+  min-width: 370px;;
+  height:100%;
+  margin: 0 auto;
+  transform: translateY(15px);
+  background-image: url(./image.jpg);
+  background-size:cover;
+} 
+.wrap2{
+  width: 100%;
+  height: 100%;
+  background-image:linear-gradient(to right,#8E9BBB,rgba(95, 161, 151, 0.5)) ;
+  display: flex;
+  align-items: center;
+  
+}
+#wrap{
+  width: 35%;
+  height: 550px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  border:none;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+#sign{
+  width: 100%;
+  height: 10%;
+  display: flex;
+ 
+}
+#sign>*{ 
+  width: 50%;
+  height: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-image:linear-gradient(to right,rgb(102, 130, 214),rgb(72, 219, 195));
+  color: white; 
+}
+#signUP{
+  border-top-left-radius: 10px;
+}
+#signIN{
+  border-top-right-radius:10px; 
 }
 
-.App-link {
-  color: #61dafb;
+
+
+#form1{
+  width: 100%;
+  /* height: 500px; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;  
+  font-size: 12px;
+  color:#717171 ;   
+  
+}
+#form2{
+display: flex;
+flex-direction: column;  
+display: none;
+} 
+.data{
+  width: 70%;
+  border-radius: 5px;
+  border: 0.5px solid #EDEDED; 
+  padding: 1.5%;
+  margin:3% 12%;
+}
+::placeholder{
+  color: #B1B1B1;
+  font-size: 11px;
+}
+input[type ="checkbox"]{
+  padding: 0;
+  margin: 0;
+  margin-left: 12%;
+ }
+#lastDiv{
+ text-align: center;
+}
+input[type=button]{   
+  padding: 15px;
+  background-image:linear-gradient(to right,#9DAEE2,#71EBD6);
+  font-size:10px;
+  color: #ECFFFF;   
+  margin-bottom: 50px; 
+}
+span{
+  text-align: center;
+  color: red;
+  font-size: 12px;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

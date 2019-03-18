@@ -14,3 +14,21 @@ class Popup extends React.Component {
   }
 }
 export default Popup;
+// state = {
+//   showPopup: false
+// };
+
+// togglePopup=()=> {
+// this.setState({
+//   showPopup: !this.state.showPopup
+// });
+// }
+// render() {
+// return (
+//   <Fragment>
+//     <h1>hihi</h1>
+//     <button onClick={this.togglePopup}>show popup</button>
+//     {this.state.showPopup ?  <Popup text='Close Me' closePopup={this.togglePopup} />: null}
+//   </Fragment>
+// );
+// }

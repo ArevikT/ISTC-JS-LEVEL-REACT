@@ -1,25 +1,41 @@
 import React, { Component, Fragment } from 'react';
-import Popup from "./components/showPopoup";
+//import Popup from "./components/showPopoup";
+import SignIn from "./components/signIn" ;
+import SignUp from "./components/signUp"
 
 import './App.css';
 
 class App extends Component {
-  
-   state = {
-      showPopup: false
-    };
-  
-  togglePopup=()=> {
-    this.setState({
-      showPopup: !this.state.showPopup
-    });
+  state={
+    signIn:true,
+    signUp:true
+  }
+  signIn=()=>{
+    this.setState({signIn:true});
+    this.setState({signUp:false});
+
+  }
+  signUp=()=>{
+    this.setState({signIn:false});
+    this.setState({signUp:true});
   }
   render() {
     return (
       <Fragment>
-        <h1>hihi</h1>
-        <button onClick={this.togglePopup}>show popup</button>
-        {this.state.showPopup ?  <Popup text='Close Me' closePopup={this.togglePopup} />: null}
+         <div class="wrap1"> 
+        <div class="wrap2">
+          <div id="wrap">
+              <div id="sign">
+                <div id="signUP" onClick={this.signUp}>SIGN UP</div>
+                <div id="signIN" onClick={this.signIn}>SIGN IN</div>
+            </div>
+               {this.state.signIn? null:<SignUp/>}
+               {this.state.signUp? null: <SignIn/>}
+          </div>
+          {/* <p id="demo"></p> */}
+      </div>
+      
+   </div>
       </Fragment>
     );
   }
