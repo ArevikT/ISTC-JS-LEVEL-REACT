@@ -3,8 +3,10 @@ import React, { Component, Fragment } from "react";
 class SignIn extends Component {
     state = {
         username:"",
-        password:""
+        password:"",
+        response:{}
     }
+   // let {username, password, response}=state;
     myFunctionUsername = () => {
           let regexName = /^[a-zA-Z]+$/;
         if( regexName.test(this.username.value) === false ){
@@ -44,7 +46,23 @@ class SignIn extends Component {
     })
    .then(response => response.json()) 
    .then((response) => {
-            console.log("You saved this item", response); 
+
+    // componentDidUpdate(prevProps,prevState,snapshot){
+    //     // if(prevState.value!==this.state.value){
+    //     // console.log("Didupdaten e")
+    //     // }
+    //      // if(snapshot!== null){
+    //     //     console.log(snapshot,"snapshot")
+    //     console.log("You saved this item", this.state.response);
+    //     for(let key in this.state.response){
+    //         if(prevState.response[key]!==this.state.response[key]){
+
+    //             console.log("aaaaaaaaa", this.state.response[key]);
+    //         }
+            
+    //     }
+    //     }       
+        // console.log("You saved this item", this.state.response);
           })        
         }
    }

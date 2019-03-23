@@ -7,7 +7,9 @@ class SignUp extends Component {
         email: "",
         password: "",
         confirmPassword: "",
+        response: {}
     }
+
     myFunctionName = () => {
         let regexName = /^[a-zA-Z]+$/;
             if( regexName.test(this.name.value) === false ){
@@ -74,11 +76,11 @@ class SignUp extends Component {
       fetch('http://rest.learncode.academy/api/learncode/friends', {
         method: "POST",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(objSignIn),
+        body: JSON.stringify(objSignIn)
     })
    .then(response => response.json()) 
    .then((response) => {
-            console.log("You saved this item", response); 
+            console.log("You saved this item", this.state.response); 
           })  
               
         }

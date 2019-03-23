@@ -17,9 +17,10 @@ class Cycle extends Component{
    getSnapshotBeforeUpdate(prevProps,prevState){
        if(prevState.value !== this.state.value){
 
-           return prevState.value
+           return prevState.value;
        }
-       return null
+
+       return null;
 
    }
    componentDidUpdate(prevProps,prevState,snapshot){
