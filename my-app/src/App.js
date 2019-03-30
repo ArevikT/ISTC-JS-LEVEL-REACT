@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import Cycle from './components/lifecycles';
-import ReduxEx from "./components/redux"
+import ReduxEx from "./components/redux" ;
+import { connect } from "react-redux" ;
 
 
 class App extends Component {
@@ -14,4 +15,4 @@ class App extends Component {
  }
 }
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
